@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+      /* Add your own CSS styles here */
+      footer {
+        background-color: #f2f2f2;
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+    <title>Document</title>
+</head>
+<body style="background-color: bisque;">
+
+<div style="display: flex; justify-content: space-around;">
+    <div><span>Soru 1</span><br>
+      <span>Js Data objesi</span>
+      <ol id="companyNamelistesi" type="1" ></ol>
+  
+    </div>
+<div><span>Soru 2</span><br><span>Axios Product data</span>
+    <div style="max-height: 300px; box-sizing: border-box; overflow: auto ;background-color: aqua;">
+      <ol id="productlistesi"></ol></div></div>
+
+
+
+    <div style="text-align: end;">
+    <span>Soru 3</span><br><ul>Producd data girme</ul>
+    <label for="">ProductName</label><input id="ProductNametext" type="text"><br>
+    <label for="">Price</label><input id="Pricetext" type="text"><br>
+    <label for="">Stock</label><input id="Stocktext" type="text"><br>
+    <button onclick="productpush()">Gönder</button>
+    <div style="text-align: start;"><ul  id="productpushh"></ul></div>
+    
+    </div>
+</div>
+
+ <!--1.Soru customer objesi oluşturalım. Ve objenin içerisindeki companyName ekranda gösterelim.(Id,CompanyName,ContactName,ContactTitle,Address)-->
+
+    <!--2.Soru axios kütüphanesini kullanarak products dataları çekelim prdocut nameleri ekranda gösterelim.-->
+
+    <!--3.Soru Product formu oluşturalım formun alanları ProductName - Price -Stock olsun kullanıcıdan alanınan degerleri ekranda gösterelim.-->
+
+    <!-- https://northwind.vercel.app/ -->
+    
+    
+    <!--4.Soru select içerisine option olarak inputtan girilen degerler eklensin.-->
+    <div style="display: flex; justify-content: space-around; background-color: beige; height: 300px">
+<div style="background-color: aqua;">
+  <span>Soru 4</span><br>
+    <form action="#" method="post">
+        <input type="text" id="cityName" value="">
+        <input type="button" id="kaydet" onclick="cityAdd()" value="Sehir Ekle"> 
+        </form>
+        <select id="sehir">
+
+        </select>
+    </form>
+</div>
+
+    <!--5.Soru İnputlardan girilen 5 sayıyı sayı dizisi olarak oluşturalım.[0] 35 , [1] 63 gibi her bir index bir sayı tutucak. Sayı dizisindeki her bir sayıyı ekrana yazdıralım ve sayılara border ve font size verelim indexsi 3 olan sayının rengi mavi olsun.-->
+<div><span>Soru 5</span><br><div>
+    <form action="#" method="post">
+        <label for="">Sayı 1-</label><input type="text" id="numberOne"><br>
+        <label for="">Sayı 2-</label><input type="text" id="numberTwo"><br>
+        <label for="">Sayı 3-</label><input type="text" id="numberThree"><br>
+        <label for="">Sayı 4-</label><input type="text" id="numberFour"><br>
+        <label for="">Sayı 5-</label><input type="text" id="numberFive"></input><br>
+        <button type="button" id="add" onclick="sayis()">Ekle</button><br></form>
+        <div ><ul id="output" style="width: 100px;" ></ul></div>
+    
+    </div></div>
+      <!--6.Soru -->
+  <!--isim- soyisim - yas bilgilerini formdan alıp oluşturulan tablonun içerisine ekletelim.-->
+
+  <div style="text-align: end;" id="div1">
+    <span>Soru 6</span><br>
+    <label>Name:</label>       <input type="text"  id="name"><br>
+    <label>LastName:</label>  <input type="text"  id="lastname"><br>
+    <label>Age:</label>       <input type="number"  id="age"><br>
+    <button id="add" onclick="isimbilgisi()">Ekle</button>
+    <br>
+    <div>
+  <table id="list" style="border: 2px solid black;">
+      <tr>
+        <th>Name</th>
+        <th>LastName</th>
+        <th>Age</th>
+      </tr>
+  </table>
+  </div></div>
+  <br>
+
+</div>
+  <!--7.Soru-->
+  <!--Axios kütüphanesi kullanarak get- post - put - delete işlemlerini yapınız (orders üzerinden)-->
+<div style="text-align: center;">
+  <span>Soru 7</span>
+  <div style="display: flex; justify-content: space-around; ">
+    
+    <div><button onclick="orderget()">Order Get</button>
+      <div style="height: 300px; overflow: auto;"> <ol id="ordergetlist"></ol></div>
+   
+    </div>
+    <div>
+        <input type="date" name="" id="orderdate">
+        <button onclick="orderPost()">Order Post</button>
+
+        <div style="height: 300px; overflow: auto;"><ol id="orderdatelist" ></ol></div>
+        </div>
+
+    <div style="text-align: end;">
+      <button onclick="orderput()">Order Put</button>
+      <button onclick="orderdelete()">Order Del</button><br>
+    <label for="">Select id</label><input type="text" id="selectid"><br>
+    <input type="date" name="" id="putdate">
+    </div>
+    
+  </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Hakan Çınar Tarafından yapılmıştır ve tüm hakları saklıdır.</p>
+  </footer>
+<script src="/js/index.js"></script>
+</body>
+</html>
