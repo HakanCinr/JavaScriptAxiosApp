@@ -185,7 +185,8 @@ function sayis() {
   //  7.Soru  Axios kütüphanesi kullanarak get- post - put - delete işlemlerini yapınız (orders üzerinden)
 
 function orderget(){
-    document.getElementById('orderdatelist').innerHTML = ""
+    document.getElementById("ordergetlist").innerHTML = ""
+    document.getElementById("orderdatelist").innerHTML = ""
     axios.get("https://northwind.vercel.app/api/orders")
     .then(res =>{
         let orderlist = res.data;
@@ -261,3 +262,39 @@ function orderdelete() {
     });
     })
   }
+
+
+function ordergetid() {
+    let orderId = document.getElementById("orderid").value;
+    axios.get("https://northwind.vercel.app/api/orders/")
+      .then(res => {
+        let orderlistdata = res.data;
+        let filter = orderlistdata.filter(q => q.id == orderId);
+        filter.forEach(item => {
+          var lielement = document.createElement("li");
+          
+          if(item.shippedDate == "NULL"){
+            lielement.innerHTML = "id: " + item.id + "<br>" + " Customer: " + item.customerId + "<br>" + " Order Date: " + formatDate(new Date(item.orderDate)) +"<br>" +  " Teslim Tarihi: " + "Henüz teslim edilmedi" + "<br>" + " Ship Name: " + item.shipName + "<br>" + " Ship Address: " + item.shipAddress.street + " " + item.shipAddress.city + " " + item.shipAddress.region + " " + item.shipAddress.postalCode + " " + item.shipAddress.country;
+          }
+          else{
+          lielement.innerHTML = "id: " + item.id + "<br>" + " Customer: " + item.customerId + "<br>" + " Order Date: " + formatDate(new Date(item.orderDate)) +"<br>" +  " Teslim Tarihi: " + formatDate(new Date(item.shippedDate)) + "<br>" + " Ship Name: " + item.shipName + "<br>" + " Ship Address: " + item.shipAddress.street + " " + item.shipAddress.city + " " + item.shipAddress.region + " " + item.shipAddress.postalCode + " " + item.shipAddress.country;
+}
+          document.getElementById("orderidlist").appendChild(lielement);
+        });
+      })
+  }
+  
+ 
+
+  function formatDate(date) {
+    var day = date.getDate();
+    var month = date.getMonth() + 1; // Months are zero-based
+    var year = date.getFullYear();
+    let format = day + "/" + month + "/" + year;
+    return format;
+  }
+
+
+
+    
+  

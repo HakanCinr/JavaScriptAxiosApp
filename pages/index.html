@@ -82,7 +82,7 @@
   <!--isim- soyisim - yas bilgilerini formdan alıp oluşturulan tablonun içerisine ekletelim.-->
 
   <div style="text-align: end;" id="div1">
-    <span>Soru 6</span><br>
+    <div class="soru"><span>Soru 6</span></div><br>
     <label>Name:</label>       <input type="text"  id="name"><br>
     <label>LastName:</label>  <input type="text"  id="lastname"><br>
     <label>Age:</label>       <input type="number"  id="age"><br>
@@ -124,7 +124,10 @@
     <label for="">Select id</label><input type="text" id="selectid"><br>
     <input type="date" name="" id="putdate">
     </div>
-    
+    <div><label for="">ID Order Data</label><input id="orderid" type="number"><br>
+      <button onclick="ordergetid()">Getir</button><br>
+      <div><ol id="orderidlist"></ol></div>
+    </div>
   </div>
   </div>
 
