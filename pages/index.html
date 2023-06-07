@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <style>
-      /* Add your own CSS styles here */
+      .soru{font-weight: bold; width: 80px; background-color: rgb(30, 255, 0); border-radius: 10%; 
+
+        text-align: center; }
+     
       footer {
         background-color: #f2f2f2;
         padding: 20px;
@@ -18,19 +21,19 @@
 <body style="background-color: bisque;">
 
 <div style="display: flex; justify-content: space-around;">
-    <div><span>Soru 1</span><br>
+    <div><div class="soru" ><span>Soru 1</span></div><br>
       <span>Js Data objesi</span>
-      <ol id="companyNamelistesi" type="1" ></ol>
-  
+      <ol id="companyNamelistesi" type="1" ></ol>  
     </div>
-<div><span>Soru 2</span><br><span>Axios Product data</span>
+
+<div><div class="soru" ><span>Soru 2</span></div><br><span>Axios Product data</span>
     <div style="max-height: 300px; box-sizing: border-box; overflow: auto ;background-color: aqua;">
       <ol id="productlistesi"></ol></div></div>
 
 
 
     <div style="text-align: end;">
-    <span>Soru 3</span><br><ul>Producd data girme</ul>
+    <div class="soru" ><span>Soru 3</span></div><br><ul>Producd data girme</ul>
     <label for="">ProductName</label><input id="ProductNametext" type="text"><br>
     <label for="">Price</label><input id="Pricetext" type="text"><br>
     <label for="">Stock</label><input id="Stocktext" type="text"><br>
@@ -50,9 +53,9 @@
     
     
     <!--4.Soru select içerisine option olarak inputtan girilen degerler eklensin.-->
-    <div style="display: flex; justify-content: space-around; background-color: beige; height: 300px">
-<div style="background-color: aqua;">
-  <span>Soru 4</span><br>
+    <div style="display: flex; justify-content: space-around; background-color: beige; height: 400px">
+<div style="background-color: aqua;"><div class="soru" ><span >Soru 4</span><br></div>
+  
     <form action="#" method="post">
         <input type="text" id="cityName" value="">
         <input type="button" id="kaydet" onclick="cityAdd()" value="Sehir Ekle"> 
@@ -64,7 +67,7 @@
 </div>
 
     <!--5.Soru İnputlardan girilen 5 sayıyı sayı dizisi olarak oluşturalım.[0] 35 , [1] 63 gibi her bir index bir sayı tutucak. Sayı dizisindeki her bir sayıyı ekrana yazdıralım ve sayılara border ve font size verelim indexsi 3 olan sayının rengi mavi olsun.-->
-<div><span>Soru 5</span><br><div>
+<div><div class="soru" ><span>Soru 5</span></div><br><div>
     <form action="#" method="post">
         <label for="">Sayı 1-</label><input type="text" id="numberOne"><br>
         <label for="">Sayı 2-</label><input type="text" id="numberTwo"><br>
@@ -99,8 +102,9 @@
 </div>
   <!--7.Soru-->
   <!--Axios kütüphanesi kullanarak get- post - put - delete işlemlerini yapınız (orders üzerinden)-->
-<div style="text-align: center;">
-  <span>Soru 7</span>
+<div style="text-align: center; align-items: center;">
+  <div class="soru" ><span>Soru 7</span></div>
+ 
   <div style="display: flex; justify-content: space-around; ">
     
     <div><button onclick="orderget()">Order Get</button>
